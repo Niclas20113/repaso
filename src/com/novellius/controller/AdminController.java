@@ -47,4 +47,16 @@ public class AdminController {
 		model.addAttribute("admin", adminUpdate);
 		return "admin";
 	}
+
+	@RequestMapping("admin/{idAd}/delete")
+	public String showDelete(@PathVariable("idAd") int idAd, RedirectAttributes ra) {
+		if (adminService.delete(idAd)) {
+			ra.addFlashAttribute("result", "User deleted");
+		}else {
+			ra.addFlashAttribute("result", "Error removing user");
+		}
+
+		return "redirect:/admin";
+	}
+
 }

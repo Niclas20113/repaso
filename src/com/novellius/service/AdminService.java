@@ -34,4 +34,9 @@ public class AdminService {
 		return adminDao.findByIdAd(idAd);
 	}
 
+	public boolean delete(int idAd) {
+		// TODO Auto-generated method stub
+		return adminDao.deleteAd(idAd);
+	}
+
 }

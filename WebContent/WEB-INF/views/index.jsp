@@ -7,13 +7,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<script type="text/javascript" src='<c:url value="/res/js/jquery.js" />'></script>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		alert("Successful test");
+	});
+</script>
+
 </head>
 <body>
 	<center>
 		<h1>This is Index</h1>
-		<c:out value="${message}"/><br/>
-		<a href='<c:url value="/admin"/>'>Manage Admin</a><br/>
-		<a href='<c:url value="/about"/>'>About</a>
+		<c:out value="${message}" />
+		<br /> <a href='<c:url value="/admin"/>'>Manage Admin</a><br /> <a
+			href='<c:url value="/about"/>'>About</a>
 	</center>
 </body>
 </html>

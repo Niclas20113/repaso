@@ -7,6 +7,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<script type="text/javascript" src='<c:url value="/res/js/jquery.js"/>'></script>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery(".confirm").on("click",function(){
+			return confirm("Sure you want to delete this user?");
+		});
+	});
+</script>
 </head>
 <body>
 	<center>
@@ -19,6 +27,7 @@
 			<th>Work Position</th>
 			<th>Creation Date</th>
 			<th>Update</th>
+			<th>Delete</th>
 		</tr>
 		<c:forEach items="${admins}" var="admin">
 			<tr>
@@ -27,6 +36,8 @@
 				<td><c:out value="${admin.creation_date}" /></td>
 				<td><a href='<c:url value="admin/${admin.idAd}/update"/>'>Update
 						User</a></td>
+				<td><a class="confirm"
+					href='<c:url value="admin/${admin.idAd}/delete"/>'>Delete User</a></td>
 			</tr>
 
 		</c:forEach>
