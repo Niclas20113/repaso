@@ -39,8 +39,6 @@
 		method="post" modelAttribute="admin">
 		<table border="1" align="center">
 			<sf:input path="IdAd" type="hidden" />
-			<sf:input path="creation_date" type="hidden" />
-
 			<tr>
 				<td>Name Admin:</td>
 				<td><sf:input path="nameAd" type="text" /></td>

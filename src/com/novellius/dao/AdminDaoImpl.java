@@ -57,7 +57,7 @@ public class AdminDaoImpl implements AdminDao {
 	public boolean updateAd(Admin Admin) {
 		// TODO Auto-generated method stub
 		return jdbcTemplate.update(
-				"Update springbd.admin set nameAd=:nameAd, workPositionAd=:workPositionAd, creation_date=:creation_date where IdAd=:IdAd",
+				"Update springbd.admin set nameAd=:nameAd, workPositionAd=:workPositionAd where IdAd=:IdAd",
 				new BeanPropertySqlParameterSource(Admin)) == 1;
 	}
 
